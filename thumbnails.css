@@ -4,7 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    background-color:  #f4f4f4;;
+}
 header {
     background-color: black;
     opacity: 0.8;
@@ -65,60 +67,43 @@ p {
 .container {
     width: 80%;
     margin: 0 auto;
-}
-
-.hero {
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
     background: #f4f4f4;
     padding: 20px 0 5px 0;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
 }
-
-.hero p {
-    padding: 5px 0 18px 0;
-}
-
-.hero .btn {
-    background: #333;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.hero .btn:hover {
-    background-color: #f90;
-}
-
-.products {
-    padding: 20px 0;
-    font-family: 'Roboto', sans-serif;
+.container h1 {
+    text-align: center;
 }
 
 .product-grid {
     display: flex;
+    flex-wrap:wrap;
+    gap:20px;
     justify-content: center;
 }
 
-.product-card {
+.product-card { 
     background: #fff;
-    border: 2px solid #ddd;
-    padding: 2px;
-    text-align: center;
+    border: 2px solid #c4c4c4;
     border-radius: 5px;
+    width:32%;
+    height:AUTO;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow:hidden;
+    cursor: pointer;
     position: relative;
-    width: 500px; /* Adjusted width of the product card */
 }
 
 .product-card img {
-    width: 100%; /* Ensure image takes full width of its container */
-    height: auto;
-    margin-bottom: 3px; /* Optional: Space between image and button */
-    display: block;
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+.product-card img:hover{
+    transform:scale(1.1);
 }
 
 .animated-image {
@@ -138,34 +123,67 @@ p {
         opacity: 1; /* End as visible */
     }
 }
+.popup-image{
+    position: fixed;
+    top:0; left: 0;
+    background: rgba(0,0,0,0.9);
+    width:100%;
+    height:100%;
+    z-index: 100;
+    display: none;
+}
+span{
+    position:absolute;
+    top:0px;
+    right:100px;
+    font-size: 100px;
+    font-weight: bolder;
+    cursor: pointer;
+    z-index: 100;
+    color:white;
+    background-color: black;
+    transition: background-color 0.3s;
+    border-radius: 40px;
+    rotate: 90deg;
+}
+span:hover{
+    background-color: red;
+}
+.popup-image img{
+    position:absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid white;
+    border-radius: 5px;
+    width:750px;
+    object-fit: cover;
+
+}
 
 footer {
     font-family: 'Roboto', sans-serif;
     background: #333;
-    color: #fff;
+    color: #f4f4f4;
     padding: 5px 0;
     text-align: center;
 }
+
 h3{
     font-family:poppins;
 }
-.social-media {
-    list-style: none;
-    display: flex;
+.social {
+    width: 80%;
+    margin: 0 auto;
     justify-content: center;
-}
-
-.social-media li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer-links {
-    display: flex;
-    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    background: #333;
+    padding: 20px 0 5px 0;
+    text-align: center;
 }
 
 .footer-logo {
+    color: #fff;
+    justify-content: center;
     width: 70px; /* Adjust size as needed */
     height: auto;
     position: relative;
@@ -177,135 +195,60 @@ h3{
     opacity: 0.7; /* Slightly fade image on hover */
 }
 
-/* Media query for larger devices (up to 1920px) */
-@media (max-width: 1920px) {
+@media (max-width:1280px) {
+    .popup-image img{
+        width:95%;
+    }
     h1 {
-        font-size: 48px;
+        font-size: 38px;
     }
-
-    .product-card {
-        width: 450px; /* Adjust width for larger screens */
-    }
-
-    .product-grid {
-        gap: 40px; /* Reduce gap for a more compact look */
-    }
-
-    .hero .btn {
-        font-size: 18px; /* Slightly larger button for larger screens */
-    }
-
-    .container {
-        width: 75%; /* Adjust container width for better spacing */
-    }
-}
-
-/* Media query for medium-sized screens (up to 1366px) */
-@media (max-width: 1366px) {
-    h1 {
-        font-size: 40px;
-    }
-
-    .product-card {
-        width: 400px; /* Adjust width for medium screens */
-    }
-
-    .product-grid {
-        gap: 30px;
-    }
-
-    .hero .btn {
-        font-size: 16px;
-    }
-
-    .container {
-        width: 80%;
-    }
-}
-
-/* Media query for smaller screens (up to 1280px) */
-@media (max-width: 1280px) {
-    h1 {
-        font-size: 36px;
-    }
-
-    .product-card {
-        width: 350px; /* Adjust width for smaller screens */
-    }
-
-    .product-grid {
-        gap: 25px;
-    }
-
-    .hero .btn {
-        font-size: 14px;
-    }
-}
-
-/* Media query for mobile (up to 768px) */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-    }
-
-    .menu-toggle {
-        display: block;
-        font-size: 28px;
-    }
-
-    .nav-container ul {
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
-    }
-
-    .nav-container ul li {
-        margin: 10px 0;
-    }
-
-    .container {
-        width: 90%;
-    }
-
-    .hero {
-        padding: 20px 0;
-    }
-
-    .product-grid {
-        gap: 20px;
-        justify-content: center;
-    }
-
-    .product-card {
-        width: 100%;
-        max-width: 300px;
-        padding: 10px;
-    }
-}
-
-/* Media query for small devices (up to 480px) */
-@media (max-width: 480px) {
-    h1 {
-        font-size: 28px;
-    }
-
+    
     p {
-        font-size: 16px;
+        font-size: 19px;
     }
-
-    .product-card {
-        max-width: 100%;
-        padding: 10px;
+    h2{
+        font-size: 21px;
     }
-
-    .hero .btn {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-
-    .footer-logo {
-        width: 50px;
+    h3{
+        font-size: 19px;
     }
 }
+
+@media (max-width:1024px) {
+    .popup-image img{
+        width:85%;
+    }
+    h1 {
+        font-size: 34px;
+    }
+    
+    p {
+        font-size: 17px;
+    }
+    h2{
+        font-size: 19px;
+    }
+    h3{
+        font-size: 17px;
+    }
+}
+
+@media (max-width:768px) {
+    .popup-image img{
+        width:70%;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    
+    p {
+        font-size: 1px;
+    }
+    h2{
+        font-size: 16px;
+    }
+    h3{
+        font-size: 14px;
+    }
+}
+
