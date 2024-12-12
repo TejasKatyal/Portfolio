@@ -26,19 +26,14 @@
         </nav>
     </header>
 
-    <section id="home" class="hero">
         <div class="container">
             <h1>Welcome</h1>
             <p>Some Of My Best Thumbnails</p>
         </div>
-    </section>
 
     <div class="need-flex">
-        <section id="shop" class="products">
             <div class="container">
-                <center>
                     <h2>THUMBNAILS</h2>
-                </center>
                 <br>
                 <div class="product-grid">
                     <div class="product-card">
@@ -59,9 +54,6 @@
                             <h3>How to MAKE your OWN texture pack</h3>
                         </div>
                     </div>
-                </div>
-                <br>
-                <div class="product-grid">
                     <div class="product-card">
                         <div class="animated-image">
                             <img src="17.jpg" alt="4">
@@ -80,8 +72,6 @@
                             <h3>Best Texture Packs</h3>
                         </div>
                     </div>
-                </div>
-                <div class="product-grid">
                     <div class="product-card">
                         <div class="animated-image">
                             <img src="3.jpg" alt="7">
@@ -100,9 +90,6 @@
                             <h3>Kiss Me Montage</h3>
                         </div>
                     </div>
-                </div>
-                <br>
-                <div class="product-grid">
                     <div class="product-card">
                         <div class="animated-image">
                             <img src="10.jpg" alt="10">
@@ -121,9 +108,6 @@
                             <h3>100 Subs Pack Release</h3>
                         </div>
                     </div>
-                </div>
-                <br>
-                <div class="product-grid">
                     <div class="product-card">
                         <div class="animated-image">
                             <img src="13.jpg" alt="13">
@@ -142,9 +126,6 @@
                             <h3>Top 3 Texture Packs</h3>
                         </div>
                     </div>
-                </div>
-                <br>
-                <div class="product-grid">
                     <div class="product-card">
                         <div class="animated-image">
                             <img src="16.jpg" alt="16">
@@ -163,9 +144,6 @@
                             <h3>Custom Skins</h3>
                         </div>
                     </div>
-                </div>
-                <br>
-                <div class="product-grid">
                     <div class="product-card">
                         <div class="animated-image">
                             <img src="5.jpg" alt="19">
@@ -180,28 +158,33 @@
                     </div>
                 </div>
             </div>
-        </section>
+    </div>
+    <div class="popup-image">
+        <span>&times;</span>
+        <img src="21.jpg" alt="gg">
     </div>
 
     <footer>
-        <div class="container">
+        <div class="social">
             <p>&copy; 2024 Devil Hand. All rights reserved.</p>
-            <ul class="social-media">
-                <div class="footer-links">
-                    <li>
                         <a href="https://www.youtube.com/@devilhand8320">
                             <img src="Youtube.png" alt="Youtube" class="footer-logo">
                         </a>
-                    </li>
                 </div>
-            </ul>
         </div>
     </footer>
 
     <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-container').classList.toggle('active');
+        document.querySelectorAll('.product-card img').forEach(image =>{
+            image.onclick = () => {
+                document.querySelector('.popup-image').style.display = 'block';
+                document.querySelector('.popup-image img').src = image.getAttribute('src');
+            }
         });
+
+        document.querySelector('.popup-image span').onclick =() =>{
+            document.querySelector('.popup-image').style.display = 'none';
+        }
     </script>
 </body>
 </html>
