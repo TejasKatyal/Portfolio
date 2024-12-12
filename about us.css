@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color:  #f4f4f4;;
+}
+
 header {
     background-color: black;
     opacity: 0.8;
@@ -25,11 +29,13 @@ header {
 }
 
 h1 {
+    justify-content: center;
     font-size: 40px;
     font-family: 'Poppins', sans-serif;
 }
 
 p {
+    justify-content: center;
     font-family: 'Made Tommy', sans-serif;
     font-size: 20px;
 }
@@ -62,49 +68,15 @@ p {
     opacity: 0.7;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
+.container{
+    width:95%;
+    padding: 50px;
 }
 
-.hero {
-    background: #f4f4f4;
-    padding: 20px 0 230px 0;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-}
-
-.hero p {
-    padding: 5px 0 20px 0;
-}
-
-.hero .btn {
-    background: #333;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    transition: background-color 0.3s;
-}
-
-.hero .btn:hover {
-    background-color: #f90;
-}
-
-
-/* Define the zoom-in animation */
-@keyframes zoom-in {
-    from {
-        transform: scale(0.8); /* Start scaled up */
-        opacity: 0; /* Start as invisible */
-    }
-    to {
-        transform: scale(1); /* End at normal size */
-        opacity: 1; /* End as visible */
-    }
+h2{
+    justify-content: center;
+    font-family: poppins;
+    color:#f90;
 }
 
 footer {
@@ -117,23 +89,19 @@ footer {
 h3{
     font-family:poppins;
 }
-.social-media {
-    list-style: none;
-    display: flex;
+.social {
+    width: 80%;
+    margin: 0 auto;
     justify-content: center;
-}
-
-.social-media li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer-links {
-    display: flex;
-    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    background: #333;
+    padding: 20px 0 5px 0;
+    text-align: center;
 }
 
 .footer-logo {
+    color: #fff;
+    justify-content: center;
     width: 70px; /* Adjust size as needed */
     height: auto;
     position: relative;
@@ -143,91 +111,4 @@ h3{
 
 .footer-logo:hover {
     opacity: 0.7; /* Slightly fade image on hover */
-}
-
-/* Media query for larger devices (up to 1920px) */
-@media (max-width: 1920px) {
-    h1 {
-        font-size: 48px;
-    }
-
-    .hero .btn {
-        font-size: 55px; /* Slightly larger button for larger screens */
-    }
-
-    .container {
-        width: 75%; /* Adjust container width for better spacing */
-    }
-}
-
-/* Media query for medium-sized screens (up to 1366px) */
-@media (max-width: 1366px) {
-    h1 {
-        font-size: 40px;
-    }
-
-    .hero .btn {
-        font-size: 50px;
-    }
-
-    .container {
-        width: 80%;
-    }
-}
-
-/* Media query for smaller screens (up to 1280px) */
-@media (max-width: 1280px) {
-    h1 {
-        font-size: 36px;
-    }
-    .hero .btn {
-        font-size: 14px;
-    }
-}
-
-/* Media query for mobile (up to 768px) */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-    }
-    .nav-container ul {
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
-    }
-
-    .nav-container ul li {
-        margin: 10px 0;
-    }
-
-    .container {
-        width: 90%;
-    }
-
-    .hero {
-        padding: 20px 0;
-    }
-
-
-/* Media query for small devices (up to 480px) */
-@media (max-width: 480px) {
-    h1 {
-        font-size: 28px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    .hero .btn {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-
-    .footer-logo {
-        width: 50px;
-    }
-}
 }
