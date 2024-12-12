@@ -35,11 +35,8 @@
     </section>
 
     <div class="need-flex">
-        <section id="shop" class="products">
             <div class="container">
-                <center>
                     <h2>THUMBNAILS</h2>
-                </center>
                 <br>
                 <div class="product-grid">
                     <div class="product-card">
@@ -60,9 +57,6 @@
                             <h3>Fabulously Optimized</h3>
                         </div>
                     </div>
-                </div>
-                <br>
-                <div class="product-grid">
                     <div class="product-card">
                         <div class="animated-image">
                             <img src="4.jpg" alt="4">
@@ -83,7 +77,6 @@
                     </div>
                 </div>
             </div>
-        </section>
 
         <section id="home" class="hero">
             <div class="container">
@@ -92,25 +85,32 @@
         </section>
     </div>
 
+    <div class="popup-image">
+        <span>&times;</span>
+        <img src="21.jpg" alt="gg">
+    </div>
+
     <footer>
-        <div class="container">
+        <div class="social">
             <p>&copy; 2024 Devil Hand. All rights reserved.</p>
-            <ul class="social-media">
-                <div class="footer-links">
-                    <li>
                         <a href="https://www.youtube.com/@devilhand8320">
                             <img src="Youtube.png" alt="Youtube" class="footer-logo">
                         </a>
-                    </li>
                 </div>
-            </ul>
         </div>
     </footer>
 
     <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-container').classList.toggle('active');
+        document.querySelectorAll('.product-card img').forEach(image =>{
+            image.onclick = () => {
+                document.querySelector('.popup-image').style.display = 'block';
+                document.querySelector('.popup-image img').src = image.getAttribute('src');
+            }
         });
+
+        document.querySelector('.popup-image span').onclick =() =>{
+            document.querySelector('.popup-image').style.display = 'none';
+        }
     </script>
 </body>
 </html>
