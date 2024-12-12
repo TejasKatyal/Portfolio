@@ -25,34 +25,36 @@
             </ul>
         </nav>
     </header>
-
-    <section id="home" class="hero">
+    <center>
         <div class="container">
             <h1>About Us</h1>
             <p>Who is Tejas Katyal?</p><br><br>
             <h2>I am a dedicated YouTuber specializing in thumbnail design, video editing, and web design. With a keen eye for detail, I create engaging and visually appealing thumbnails and  high-quality video content, including short-form videos that capture attention. My passion extends to gaming,  particularly with titles such as Minecraft, Dragon Ball Z, Call of Duty, and Battlefield. Having played Minecraft for nearly four years, I have developed a deep appreciation for the game and continue to create diverse and exciting Minecraft content for my channel.
             </h2>
         </div>
-    </section>
+    </center>
+
     <footer>
-        <div class="container">
+        <div class="social">
             <p>&copy; 2024 Devil Hand. All rights reserved.</p>
-            <ul class="social-media">
-                <div class="footer-links">
-                    <li>
                         <a href="https://www.youtube.com/@devilhand8320">
                             <img src="Youtube.png" alt="Youtube" class="footer-logo">
                         </a>
-                    </li>
                 </div>
-            </ul>
         </div>
     </footer>
 
     <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-container').classList.toggle('active');
+        document.querySelectorAll('.product-card img').forEach(image =>{
+            image.onclick = () => {
+                document.querySelector('.popup-image').style.display = 'block';
+                document.querySelector('.popup-image img').src = image.getAttribute('src');
+            }
         });
+
+        document.querySelector('.popup-image span').onclick =() =>{
+            document.querySelector('.popup-image').style.display = 'none';
+        }
     </script>
 </body>
 </html>
