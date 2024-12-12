@@ -33,25 +33,28 @@
             <a href="https://discord.gg/7axnp8y8EH" class="btn">Join Discord Server</a>
         </div>
     </section>
+    
     <footer>
-        <div class="container">
+        <div class="social">
             <p>&copy; 2024 Devil Hand. All rights reserved.</p>
-            <ul class="social-media">
-                <div class="footer-links">
-                    <li>
                         <a href="https://www.youtube.com/@devilhand8320">
                             <img src="Youtube.png" alt="Youtube" class="footer-logo">
                         </a>
-                    </li>
                 </div>
-            </ul>
         </div>
     </footer>
 
     <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-container').classList.toggle('active');
+        document.querySelectorAll('.product-card img').forEach(image =>{
+            image.onclick = () => {
+                document.querySelector('.popup-image').style.display = 'block';
+                document.querySelector('.popup-image img').src = image.getAttribute('src');
+            }
         });
+
+        document.querySelector('.popup-image span').onclick =() =>{
+            document.querySelector('.popup-image').style.display = 'none';
+        }
     </script>
 </body>
 </html>
