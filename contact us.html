@@ -8,6 +8,7 @@
     <meta name="keywords" content="Best Thumbnail Designs">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="contact us.css">
+    <link rel="stylesheet" href="lightbox.css">
     <link rel="icon" type="image/x-icon" href="Shivaye Logo.png">
     <title>Devil Hand</title>
 </head>
@@ -17,15 +18,18 @@
             <img src="DevilHand Logo.png" alt="DevilHand Logo" id="DH">
         </div>
         <nav class="nav-container">
-            <ul>
+            <ul id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="thumbnails.html">Thumbnails</a></li>
                 <li><a href="about us.html">About Us</a></li>
                 <li><a href="contact us.html">Contact Us</a></li>
             </ul>
+            <!-- Menu button for smaller screens -->
+            <img id="menuButton" src="menu.png" alt="Menu" />
         </nav>
     </header>
 
+<center>
     <section id="home" class="hero">
         <div class="container">
             <h1>Contact Us</h1>
@@ -33,28 +37,27 @@
             <a href="https://discord.gg/7axnp8y8EH" class="btn">Join Discord Server</a>
         </div>
     </section>
-    
+</center>
+
     <footer>
         <div class="social">
             <p>&copy; 2024 Devil Hand. All rights reserved.</p>
-                        <a href="https://www.youtube.com/@devilhand8320">
-                            <img src="Youtube.png" alt="Youtube" class="footer-logo">
-                        </a>
-                </div>
+            <a href="https://www.youtube.com/@devilhand8320">
+                <img src="Youtube.png" alt="Youtube" class="footer-logo">
+            </a>
         </div>
     </footer>
+    <script src="lightbox-plus-jquery.js">
 
+    </script>
     <script>
-        document.querySelectorAll('.product-card img').forEach(image =>{
-            image.onclick = () => {
-                document.querySelector('.popup-image').style.display = 'block';
-                document.querySelector('.popup-image img').src = image.getAttribute('src');
-            }
-        });
+        const menuButton = document.getElementById('menuButton');
+        const navLinks = document.getElementById('navLinks');
 
-        document.querySelector('.popup-image span').onclick =() =>{
-            document.querySelector('.popup-image').style.display = 'none';
-        }
+        // Toggle navigation links visibility on small screens when menu button is clicked
+        menuButton.addEventListener('click', function() {
+            navLinks.classList.toggle('show');
+        });
     </script>
 </body>
 </html>
