@@ -8,6 +8,7 @@
     <meta name="keywords" content="Best Thumbnail Designs">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="thumbnails.css">
+    <link rel="stylesheet" href="lightbox.css">
     <link rel="icon" type="image/x-icon" href="Shivaye Logo.png">
     <title>Devil Hand</title>
 </head>
@@ -17,174 +18,108 @@
             <img src="DevilHand Logo.png" alt="DevilHand Logo" id="DH">
         </div>
         <nav class="nav-container">
-            <ul>
+            <ul id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="thumbnails.html">Thumbnails</a></li>
                 <li><a href="about us.html">About Us</a></li>
                 <li><a href="contact us.html">Contact Us</a></li>
             </ul>
+            <!-- Menu button for smaller screens -->
+            <img id="menuButton" src="menu.png" alt="Menu" />
         </nav>
     </header>
 
-        <div class="container">
+    <section id="home" class="hero">
+        <div class="load">
             <h1>Welcome</h1>
             <p>Some Of My Best Thumbnails</p>
+            <h2>THUMBNAILS</h2>
         </div>
+    </section>
 
-    <div class="need-flex">
-            <div class="container">
-                    <h2>THUMBNAILS</h2>
-                <br>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="21.jpg" alt="1">
-                            <h3>Backbone Of Indian Gaming Community</h3>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="20.jpg" alt="2">
-                            <h3>The Infinity Castle</h3>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="18.jpg" alt="3">
-                            <h3>How to MAKE your OWN texture pack</h3>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="17.jpg" alt="4">
-                            <h3>I BOUGHT EXPENSIVE IPL CRIKCET GAMES FROM AMAZON</h3>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="1.jpg" alt="5">
-                            <h3>1px Pack Challenge</h3>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="2.jpg" alt="6">
-                            <h3>Best Texture Packs</h3>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="3.jpg" alt="7">
-                            <h3>Fabulously Optimized</h3>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="8.jpg" alt="8">
-                            <h3>Top 4 Texture Packs</h3>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="9.jpg" alt="9">
-                            <h3>Kiss Me Montage</h3>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="10.jpg" alt="10">
-                            <h3>ERROS BÁSICOS que TE IMPEDEM DE SUBIR DE ELO! </h3>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="11.jpg" alt="11">
-                            <h3>Top 4 Texture Packs</h3>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="12.jpg" alt="12">
-                            <h3>100 Subs Pack Release</h3>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="13.jpg" alt="13">
-                            <h3>Montage</h3>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="14.jpg" alt="14">
-                            <h3>Learn How to Jump space</h3>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="15.jpg" alt="15">
-                            <h3>Top 3 Texture Packs</h3>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="16.jpg" alt="16">
-                            <h3>Big Dawgs Montage</h3>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="7.jpg" alt="17">
-                            <h3>How to Combo?</h3>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="4.jpg" alt="18">
-                            <h3>Custom Skins</h3>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="5.jpg" alt="19">
-                            <h3>Cars Edit</h3>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="6.jpg" alt="20">
-                            <h3>Business Montage</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="container">
+        <div class="gallery">
+            <a href="21.jpg" data-lightbox="Thumbnails" data-title="Backbone Of Indian Gaming Community">
+                <img src="21.jpg">
+            </a> 
+            <a href="20.jpg" data-lightbox="Thumbnails" data-title="The Infinity Castle">
+                <img src="20.jpg">
+            </a> 
+            <a href="18.jpg" data-lightbox="Thumbnails" data-title="How to MAKE your OWN texture pack">
+                <img src="18.jpg">
+            </a> 
+            <a href="17.jpg" data-lightbox="Thumbnails" data-title="I BOUGHT EXPENSIVE IPL CRIKCET GAMES FROM AMAZON">
+                <img src="17.jpg">
+            </a> 
+            <a href="1.jpg" data-lightbox="Thumbnails" data-title="1px Pack Challenge">
+                <img src="1.jpg">
+            </a> 
+            <a href="2.jpg" data-lightbox="Thumbnails" data-title="Best Texture Packs">
+                <img src="2.jpg">
+            </a> 
+            <a href="3.jpg" data-lightbox="Thumbnails" data-title="Fabulously Optimized">
+                <img src="3.jpg">
+            </a> 
+            <a href="8.jpg" data-lightbox="Thumbnails" data-title="Top 4 Texture Packs">
+                <img src="8.jpg">
+            </a> 
+            <a href="9.jpg" data-lightbox="Thumbnails" data-title="Kiss Me Montage">
+                <img src="9.jpg">
+            </a> 
+            <a href="10.jpg" data-lightbox="Thumbnails" data-title="ERROS BÁSICOS que TE IMPEDEM DE SUBIR DE ELO!">
+                <img src="10.jpg">
+            </a> 
+            <a href="11.jpg" data-lightbox="Thumbnails" data-title="Top 4 Texture Packs">
+                <img src="11.jpg">
+            </a> 
+            <a href="12.jpg" data-lightbox="Thumbnails" data-title="100 Subs Pack Release">
+                <img src="12.jpg">
+            </a> 
+            <a href="13.jpg" data-lightbox="Thumbnails" data-title="Montage">
+                <img src="13.jpg">
+            </a> 
+            <a href="14.jpg" data-lightbox="Thumbnails" data-title="Learn How to Jump space">
+                <img src="14.jpg">
+            </a> 
+            <a href="15.jpg" data-lightbox="Thumbnails" data-title="Top 3 Texture Packs">
+                <img src="15.jpg">
+            </a> 
+            <a href="16.jpg" data-lightbox="Thumbnails" data-title="Big Dawgs Montage">
+                <img src="16.jpg">
+            </a> 
+            <a href="7.jpg" data-lightbox="Thumbnails" data-title="How to Combo?">
+                <img src="7.jpg">
+            </a> 
+            <a href="4.jpg" data-lightbox="Thumbnails" data-title="Custom Skins">
+                <img src="4.jpg">
+            </a> 
+            <a href="5.jpg" data-lightbox="Thumbnails" data-title="Cars Edit">
+                <img src="5.jpg">
+            </a> 
+            <a href="6.jpg" data-lightbox="Thumbnails" data-title="Business Montage">
+                <img src="6.jpg">
+            </a> 
+        </div>
     </div>
-    <div class="popup-image">
-        <span>&times;</span>
-        <img src="21.jpg" alt="gg">
-    </div>
-
     <footer>
         <div class="social">
             <p>&copy; 2024 Devil Hand. All rights reserved.</p>
-                        <a href="https://www.youtube.com/@devilhand8320">
-                            <img src="Youtube.png" alt="Youtube" class="footer-logo">
-                        </a>
-                </div>
+            <a href="https://www.youtube.com/@devilhand8320">
+                <img src="Youtube.png" alt="Youtube" class="footer-logo">
+            </a>
         </div>
     </footer>
+    <script src="lightbox-plus-jquery.js">
 
+    </script>
     <script>
-        document.querySelectorAll('.product-card img').forEach(image =>{
-            image.onclick = () => {
-                document.querySelector('.popup-image').style.display = 'block';
-                document.querySelector('.popup-image img').src = image.getAttribute('src');
-            }
-        });
+        const menuButton = document.getElementById('menuButton');
+        const navLinks = document.getElementById('navLinks');
 
-        document.querySelector('.popup-image span').onclick =() =>{
-            document.querySelector('.popup-image').style.display = 'none';
-        }
+        // Toggle navigation links visibility on small screens when menu button is clicked
+        menuButton.addEventListener('click', function() {
+            navLinks.classList.toggle('show');
+        });
     </script>
 </body>
 </html>
