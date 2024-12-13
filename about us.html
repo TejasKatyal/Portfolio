@@ -8,6 +8,7 @@
     <meta name="keywords" content="Best Thumbnail Designs">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="about us.css">
+    <link rel="stylesheet" href="lightbox.css">
     <link rel="icon" type="image/x-icon" href="Shivaye Logo.png">
     <title>Devil Hand</title>
 </head>
@@ -17,44 +18,45 @@
             <img src="DevilHand Logo.png" alt="DevilHand Logo" id="DH">
         </div>
         <nav class="nav-container">
-            <ul>
+            <ul id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="thumbnails.html">Thumbnails</a></li>
                 <li><a href="about us.html">About Us</a></li>
                 <li><a href="contact us.html">Contact Us</a></li>
             </ul>
+            <!-- Menu button for smaller screens -->
+            <img id="menuButton" src="menu.png" alt="Menu" />
         </nav>
     </header>
-    <center>
-        <div class="container">
+<center>
+    <section id="home" class="hero">
+        <div class="load">
             <h1>About Us</h1>
-            <p>Who is Tejas Katyal?</p><br><br>
+            <p>Who is Tejas Katyal?</p>
             <h2>I am a dedicated YouTuber specializing in thumbnail design, video editing, and web design. With a keen eye for detail, I create engaging and visually appealing thumbnails and  high-quality video content, including short-form videos that capture attention. My passion extends to gaming,  particularly with titles such as Minecraft, Dragon Ball Z, Call of Duty, and Battlefield. Having played Minecraft for nearly four years, I have developed a deep appreciation for the game and continue to create diverse and exciting Minecraft content for my channel.
             </h2>
         </div>
-    </center>
-
+    </section>
+</center>
     <footer>
         <div class="social">
             <p>&copy; 2024 Devil Hand. All rights reserved.</p>
-                        <a href="https://www.youtube.com/@devilhand8320">
-                            <img src="Youtube.png" alt="Youtube" class="footer-logo">
-                        </a>
-                </div>
+            <a href="https://www.youtube.com/@devilhand8320">
+                <img src="Youtube.png" alt="Youtube" class="footer-logo">
+            </a>
         </div>
     </footer>
+    <script src="lightbox-plus-jquery.js">
 
+    </script>
     <script>
-        document.querySelectorAll('.product-card img').forEach(image =>{
-            image.onclick = () => {
-                document.querySelector('.popup-image').style.display = 'block';
-                document.querySelector('.popup-image img').src = image.getAttribute('src');
-            }
-        });
+        const menuButton = document.getElementById('menuButton');
+        const navLinks = document.getElementById('navLinks');
 
-        document.querySelector('.popup-image span').onclick =() =>{
-            document.querySelector('.popup-image').style.display = 'none';
-        }
+        // Toggle navigation links visibility on small screens when menu button is clicked
+        menuButton.addEventListener('click', function() {
+            navLinks.classList.toggle('show');
+        });
     </script>
 </body>
 </html>
