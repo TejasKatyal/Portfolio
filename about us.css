@@ -1,12 +1,7 @@
-/* Base styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body{
-    background-color:  #f4f4f4;;
 }
 
 header {
@@ -28,16 +23,24 @@ header {
     height: 130px;
 }
 
-h1 {
+
+.load{
     justify-content: center;
-    font-size: 40px;
-    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    text-align: center;
+    padding :0px 8px;
 }
 
-p {
-    justify-content: center;
+.load h1 {
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px 0 0 0;
+}
+
+.load p {
     font-family: 'Made Tommy', sans-serif;
     font-size: 20px;
+    padding: 0 0 15px 0;
 }
 
 .img-container {
@@ -68,47 +71,98 @@ p {
     opacity: 0.7;
 }
 
-.container{
-    width:95%;
-    padding: 50px;
+#menuButton {
+    display: none; /* Hide the menu button by default */
+    cursor: pointer;
 }
 
-h2{
+
+.hero {
     justify-content: center;
-    font-family: poppins;
+    align-items: center;
+    width:80%;
+    border: 3px solid #c4c4c4;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margiN:50px;
+}
+h2{
+    font-size:30px;
+    font-family: Made Tommy;
     color:#f90;
+    font-weight:350;
 }
 
 footer {
     font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    align-items: center;
     background: #333;
-    color: #fff;
-    padding: 5px 0 0px 0;
+    color: #f4f4f4;
     text-align: center;
 }
-h3{
-    font-family:poppins;
-}
+
 .social {
     width: 80%;
     margin: 0 auto;
     justify-content: center;
+    align-items: center;
     font-family: 'Roboto', sans-serif;
     background: #333;
-    padding: 20px 0 5px 0;
+    padding: 10px 0 5px 0;
     text-align: center;
 }
 
 .footer-logo {
     color: #fff;
     justify-content: center;
+    align-items: center;
     width: 70px; /* Adjust size as needed */
     height: auto;
     position: relative;
     display: inline-block;
-    animation: zoom-in 5s ease-in-out forwards; /* Apply the animation */
 }
 
 .footer-logo:hover {
     opacity: 0.7; /* Slightly fade image on hover */
 }
+
+@media screen and (max-width: 768px) {
+    /* Hide links by default on small screens */
+    .nav-container ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+        position: absolute;
+        top: 120px; /* Below the header */
+        left: 0;
+        z-index: 1;
+    }
+
+    .nav-container ul li {
+        margin: 10px 0;
+    }
+
+    /* Display the menu button */
+    #menuButton {
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Toggle the visibility of the navigation links when the menu button is clicked */
+    .nav-container ul.show {
+        display: flex;
+    }
+
+    h2{
+        font-size:20px;
+        font-family: Made Tommy;
+        color:#f90;
+        font-weight:200;
+    }
+}
+
