@@ -8,6 +8,7 @@
     <meta name="keywords" content="Best Thumbnail Designs">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lightbox.css">
     <link rel="icon" type="image/x-icon" href="Shivaye Logo.png">
     <title>Devil Hand</title>
 </head>
@@ -17,100 +18,79 @@
             <img src="DevilHand Logo.png" alt="DevilHand Logo" id="DH">
         </div>
         <nav class="nav-container">
-            <ul>
+            <ul id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="thumbnails.html">Thumbnails</a></li>
                 <li><a href="about us.html">About Us</a></li>
                 <li><a href="contact us.html">Contact Us</a></li>
             </ul>
+            <!-- Menu button for smaller screens -->
+            <img id="menuButton" src="menu.png" alt="Menu" />
         </nav>
     </header>
 
     <section id="home" class="hero">
-        <div class="container">
+        <div class="load">
             <h1>Welcome</h1>
             <p>Some Of My Best Thumbnails</p>
             <a href="thumbnails.html" class="btn">Watch Out</a>
         </div>
     </section>
 
-    <div class="need-flex">
-            <div class="container">
-                    <h2>THUMBNAILS</h2>
-                <br>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="21.jpg" alt="1">
-                            <h3>Backbone Of Indian Gaming Community</h3>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="20.jpg" alt="2">
-                            <h3>The Infinity Castle</h3>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="3.jpg" alt="3">
-                            <h3>Fabulously Optimized</h3>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="4.jpg" alt="4">
-                            <h3>Custom Skins</h3>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="1.jpg" alt="5">
-                            <h3>1px Pack Challenge</h3>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="animated-image">
-                            <img src="2.jpg" alt="6">
-                            <h3>Best Texture Packs</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        <section id="home" class="hero">
-            <div class="container">
-                <a href="thumbnails.html" class="btn">Load More</a>
-            </div>
-        </section>
+    <div class="container">
+        <div class="gallery">
+            <a href="21.jpg" data-lightbox="Thumbnails" data-title="Backbone Of Indian Gaming Community">
+                <img src="21.jpg">
+            </a> 
+            <a href="20.jpg" data-lightbox="Thumbnails" data-title="The Infinity Castle">
+                <img src="20.jpg">
+            </a> 
+            <a href="3.jpg" data-lightbox="Thumbnails" data-title="Fabulously Optimized">
+                <img src="3.jpg">
+            </a> 
+            <a href="4.jpg" data-lightbox="Thumbnails" data-title="Custom Skins">
+                <img src="4.jpg">
+            </a> 
+            <a href="1.jpg" data-lightbox="Thumbnails" data-title="1px Pack Challenge">
+                <img src="1.jpg">
+            </a> 
+            <a href="2.jpg" data-lightbox="Thumbnails" data-title="Best Texture Packs">
+                <img src="2.jpg">
+            </a> 
+            <a href="18.jpg" data-lightbox="Thumbnails" data-title="How to MAKE your OWN texture pack">
+                <img src="18.jpg">
+            </a> 
+            <a href="17.jpg" data-lightbox="Thumbnails" data-title="I BOUGHT EXPENSIVE IPL CRIKCET GAMES FROM AMAZON">
+                <img src="17.jpg">
+            </a> 
+        </div>
     </div>
 
-    <div class="popup-image">
-        <span>&times;</span>
-        <img src="21.jpg" alt="gg">
-    </div>
+    <section id="home" class="hero">
+        <div class="load">
+            <a href="thumbnails.html" class="btn">Load More</a>
+        </div>
+    </section>
 
     <footer>
         <div class="social">
             <p>&copy; 2024 Devil Hand. All rights reserved.</p>
-                        <a href="https://www.youtube.com/@devilhand8320">
-                            <img src="Youtube.png" alt="Youtube" class="footer-logo">
-                        </a>
-                </div>
+            <a href="https://www.youtube.com/@devilhand8320">
+                <img src="Youtube.png" alt="Youtube" class="footer-logo">
+            </a>
         </div>
     </footer>
+    <script src="lightbox-plus-jquery.js">
 
+    </script>
     <script>
-        document.querySelectorAll('.product-card img').forEach(image =>{
-            image.onclick = () => {
-                document.querySelector('.popup-image').style.display = 'block';
-                document.querySelector('.popup-image img').src = image.getAttribute('src');
-            }
-        });
+        const menuButton = document.getElementById('menuButton');
+        const navLinks = document.getElementById('navLinks');
 
-        document.querySelector('.popup-image span').onclick =() =>{
-            document.querySelector('.popup-image').style.display = 'none';
-        }
+        // Toggle navigation links visibility on small screens when menu button is clicked
+        menuButton.addEventListener('click', function() {
+            navLinks.classList.toggle('show');
+        });
     </script>
 </body>
 </html>
