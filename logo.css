@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: black;
+    opacity: 0.8;
+    backdrop-filter: blur(8px);
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+#DH {
+    border-radius: 8px;
+    margin-top: 33px;
+    margin-left: 30px;
+    width: 238px;
+    height: 130px;
+}
+
+
+.load{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding :0px 8px;
+}
+
+.load h1 {
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px 0 0 0;
+}
+
+.load p {
+    font-family: 'Made Tommy', sans-serif;
+    font-size: 20px;
+    padding: 0 0 15px 0;
+}
+
+.img-container {
+    overflow: hidden;
+    width: 300px; /* Set a width for the container */
+    height: 200px; /* Set a height for the container */
+    position: relative; /* Position relative for absolute positioning of border */
+}
+
+.nav-container ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-container ul li {
+    margin: 0 15px;
+}
+
+.nav-container ul li a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-container ul li a:hover {
+    opacity: 0.7;
+}
+
+#menuButton {
+    display: none; /* Hide the menu button by default */
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 8px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));    
+    grid-gap: 30px
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #c4c4c4;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.2s linear;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+.hero {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer {
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    color: #f4f4f4;
+    text-align: center;
+}
+
+.social {
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    background: #333;
+    padding: 10px 0 5px 0;
+    text-align: center;
+}
+
+.footer-logo {
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    width: 70px; /* Adjust size as needed */
+    height: auto;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-logo:hover {
+    opacity: 0.7; /* Slightly fade image on hover */
+}
+
+@media screen and (max-width: 768px) {
+    /* Hide links by default on small screens */
+    .nav-container ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+        position: absolute;
+        top: 120px; /* Below the header */
+        left: 0;
+        z-index: 1;
+    }
+
+    .nav-container ul li {
+        margin: 10px 0;
+    }
+
+    /* Display the menu button */
+    #menuButton {
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Toggle the visibility of the navigation links when the menu button is clicked */
+    .nav-container ul.show {
+        display: flex;
+    }
+}
+

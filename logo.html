@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thumbnail Designs">
+    <meta name="author" content="Tejas Katyal">
+    <meta name="keywords" content="Best Thumbnail Designs">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="logo.css">
+    <link rel="stylesheet" href="lightbox.css">
+    <link rel="icon" type="image/x-icon" href="Shivaye Logo.png">
+    <title>Devil Hand</title>
+</head>
+<body>
+    <header>
+        <div class="img-container">
+            <img src="DevilHand Logo.png" alt="DevilHand Logo" id="DH">
+        </div>
+        <nav class="nav-container">
+            <ul id="navLinks">
+                <li><a href="index.html">My Thumbnails</a></li>
+                <li><a href="logo.html">My Logos</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="contact us.html">Contact Us</a></li>
+            </ul>
+            <!-- Menu button for smaller screens -->
+            <img id="menuButton" src="menu.png" alt="Menu" />
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="load">
+            <h1>Welcome</h1>
+            <p>Some Of My Best Logos</p>
+            <h2>LOGOS</h2>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="gallery">
+        <a href="Logo 7.jpg" data-lightbox="Logo" data-title="Dragon Ball Style">
+                <img src="Logo 7.jpg">
+            </a>
+		<a href="Logo 6.png" data-lightbox="Logo" data-title="Bakers Ki tchen">
+                <img src="Logo 6.png">
+            </a>
+		<a href="Logo 5.png" data-lightbox="Logo" data-title="Zina Logistics LTD">
+                <img src="Logo 5.png">
+            </a> 
+		<a href="Logo 4.png" data-lightbox="Logo" data-title="Young Stars">
+                <img src="Logo 4.png">
+            </a> 
+		<a href="Logo 3.png" data-lightbox="Logo" data-title="Firm Foundation Academy">
+                <img src="Logo 3.png">
+            </a> 
+		<a href="Logo 2.png" data-lightbox="Logo" data-title="Pemela Learning Centre">
+                <img src="Logo 2.png">
+            </a> 
+            <a href="Logo 1.png" data-lightbox="Logo" data-title="Nexit Construction LTD">
+                <img src="Logo 1.png">
+            </a> 
+        </div>
+    </div>
+    <footer>
+        <div class="social">
+            <p>&copy; 2024 Devil Hand. All rights reserved.</p>
+            <a href="https://www.youtube.com/@devilhand8320">
+                <img src="Youtube.png" alt="Youtube" class="footer-logo">
+            </a>
+        </div>
+    </footer>
+    <script src="lightbox-plus-jquery.js">
+
+    </script>
+    <script>
+        const menuButton = document.getElementById('menuButton');
+        const navLinks = document.getElementById('navLinks');
+
+        // Toggle navigation links visibility on small screens when menu button is clicked
+        menuButton.addEventListener('click', function() {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
